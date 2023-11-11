@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar text-bg-light">
+        <div class="container-fluid text-black">
+            <a class="navbar-brand text-black" href="/news">Add News</a>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <form class="form-horizontal" method="post" action="/additem">
+            <fieldset>
+                <legend>Create article</legend>
+                <div class="input-group my-4">
+                    <label class="input-group-text" for="title_data">Headline</label>
+                    <input id="head_data" name="title_data" type="text" placeholder="title" class="form-control">
+                </div>
+                <div class="row my-4">
+                    <div class="input-group col">
+                        <label class="input-group-text" for="topicid">Topic</label>
+                        <select name="topic_id" class="form-control">
+                            <option value="100">Business</option>
+                            <option value="101">Technology</option>
+                            <option value="102">Culture</option>
+                            <option value="103">Sport</option>
+                            <option value="104">Science</option>
+                            <option value="105">Social</option>
+                        </select>
+                    </div>
+                    <div class="input-group col-sm">
+                        <label class="input-group-text" for="datepub">Date</label>
+                        <input name="date_pub" type="date" class="form-control input-md">
+                    </div>
+                </div>
+                <div class="input-group col">
+                    <label class=" input-group-text" for="long_para">Long paragraph</label>
+                    <textarea class="form-control" name="long_para"></textarea>
+                </div>
+                <div class="form-group my-4">
+                    <input type="submit" class="btn btn-primary" value="create">
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
